@@ -6,7 +6,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import imone from "./cover.png"
+import imone from "./cover.png" 
+
 
 export default function Home() {
 
@@ -27,6 +28,7 @@ export default function Home() {
     }, 3000)
     return () => clearInterval(interval);
   }, [])
+
   return (
     <div className="flex flex-col min-h-screen">
       <header
@@ -86,11 +88,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex flex-col gap-2 min-[400px]:flex-row">
-                  <Button
-                    className="bg-[#FF4342] hover:bg-[#ff5a59] text-white inline-flex items-center justify-center group">
-                    Download Now
-                    <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-                  </Button>
+                <a
+                  href="/plushare.apk" download
+                  className="bg-[#FF4342] hover:bg-[#ff5a59] text-white inline-flex items-center justify-center group">
+                  Download Now
+                  <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+                </a>
                   {/* <Button
                     variant="outline"
                     className="text-white border-white hover:bg-white hover:text-[#0062D9] transition-colors duration-300">
